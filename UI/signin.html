@@ -6,9 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign In</title>
     <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/signin.css">
 </head>
 <body>
+    <div class="popup">
+        <div class="report">
+            <form action="" class="popup-form">
+                <input type="password" name="" id="newpwd" placeholder="New Password">
+                <input type="password" name="" id="confirmpwd" placeholder="Confirm Password">
+                <input type="submit" value="Reset">
+            </form>
+            <i class="fa fa-times-circle" onclick="closeModal()"></i>
+        </div>
+    </div>
     <nav class="navbar">
             <span class="svg">
                     <a href="#"><img src="./img/svg.png" alt="" onclick="openSlideMenu()"></a>
@@ -38,7 +49,7 @@
                 <br><input type="password" name="" id="passwd" required placeholder="password">
                 <br><button class="button">Sign In</button>
                 <a href="./signup.html" class="links">I don't have an account!</a><br>
-                <a href="#"class="links">Forgot your password?</a>
+                <a href="#"class="links" onclick="showModal()">Forgot your password?</a>
         </div>
     </div>
     <div class="footer">
@@ -55,6 +66,15 @@
             document.getElementById('side-menu').style.width='0';
             document.getElementById('main').style.marginLeft='0';
         }
+
+        const report = document.querySelector('.report');
+            const popup = document.querySelector('.popup');
+            function showModal() {
+                popup.style.display = "block";
+            }
+            function closeModal() {
+                popup.style.display = "none";
+            }
     </script>
 </body>
 </html>
