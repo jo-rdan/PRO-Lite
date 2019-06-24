@@ -151,6 +151,13 @@ li input [placeholder]{
 .apartments section .text{
     margin: 0 auto 0 20px;
 }
+.apartments section .flag-icon{
+    display: flex;
+    align-items: center;
+}
+.apartments section .flag-icon:hover{
+    cursor: pointer;
+}
 .apartments section .text .status{
     color: rgb(10, 117, 42);
     font-weight: bold;
@@ -168,50 +175,9 @@ li input [placeholder]{
     background: rgb(174, 174, 197);
     cursor: pointer;
 }
+
 /* Apartment section ends */
 /* Hotel section */
-.hotels{
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.075);
-    padding: 20px;
-    margin: 40px 0;
-}
-.hotels section img{
-    width: 260px;
-    height: 170px;
-}
-.hotels section{
-    display: flex;
-    height: 170px;
-    margin: 10px;
-    padding: 20px;
-    border: 5px solid rgba(21, 142, 255, 0.50);
-    border-radius: 8px;
-    background: white;
-}
-.hotels section .text{
-    margin: 0 auto 0 20px;
-}
-.hotels section .text .status{
-    color: rgb(10, 117, 42);
-    font-weight: bold;
-}
-.hotels section .text .prop-name{
-    margin: 0;
-}
-.hotels a{
-    margin: 10px auto;
-}
-.hotels input[type=button]{
-    font-weight: 550;
-}
-.hotels input[type=button]:hover{
-    background: rgb(174, 174, 197);
-    cursor: pointer;
-}
 /* Hotel Section ends */
 
 /** House section starts */
@@ -239,6 +205,14 @@ li input [placeholder]{
 }
 .houses section .text{
     margin: 0 auto 0 20px;
+}
+.houses section .flag-icon{
+    display: flex;
+    align-items: center;
+}
+.houses section .flag-icon:hover{
+    display: flex;
+    align-items: center;
 }
 .houses section .text .status{
     color: rgb(10, 117, 42);
@@ -284,6 +258,13 @@ li input [placeholder]{
 .villas section .text{
     margin: 0 auto 0 20px;
 }
+.villas section .flag-icon{
+    display: flex;
+    align-items: center;
+}
+.villas section .flag-icon{
+    cursor: pointer;
+}
 .villas section .text .status{
     color: rgb(10, 117, 42);
     font-weight: bold;
@@ -305,6 +286,75 @@ li input [placeholder]{
 /* Container section ends here */
 
 /* Footer section starts */
+/* Report section */
+.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    width: 100%;
+    height: 1608px;
+    background: rgb(17, 17, 17,0.5);
+    position: absolute;
+}
+.report{
+    display: block;
+    position: absolute;
+    top: 550px;
+    right: 289px;
+    left: 407px;
+    width: 500px;
+    height: 300px;
+    margin: 50px auto;
+    background: #142b47; 
+}
+.report form{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 400px;  
+    margin: 30px auto 0 60px;
+}
+.report form input, textarea{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid burlywood;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.report form input[type=submit]{
+    width: 384px;
+    background: #1234ad;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 13px 10px;
+    font-size: 17px;
+}
+.report form input[type=submit]:hover{
+    cursor: pointer;
+}
+.report form h3{
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 25px;
+}
+.report i{
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 470px;
+    width: 0;
+}
+.report i:hover{
+    cursor: pointer;
+}
+i:hover{
+    cursor: pointer;
+}
+/* Report section ends */
 footer{
     display: flex;
     flex: 1;
@@ -404,6 +454,13 @@ footer img,ul{
         width: 100%;
         height: 200px;
     }
+
+    .apartments section{
+        height: 400px;
+    }
+    .villas section{
+        height: 400px;
+    }
 }
 @media (max-width:380px){
     footer ul{
@@ -413,6 +470,71 @@ footer img,ul{
         footer ul li{
             display: block;
         }
+    }
+}
+@media (max-width:1085px){
+    .report{
+        left: 200px;
+    }
+    @media (max-width:759px){
+        .report{
+            left: 100px;
+        }
+        @media (max-width:635px){
+            .report{
+                left: 50px;
+            }
+        }
+    }
+    @media (max-width:580px) {
+        .report{
+            width: 400px;
+            height: 280px;
+        }
+        .report form{
+            width:370px;
+            margin:20px;
+        }
+        .report form input[type=submit]{
+            width:120px;
+            margin: 8px auto;
+        }
+        .report i{
+            left: 370px;
+        }
+    }
+}
+@media (max-width:555px){
+    .report form{
+        margin-left: 80px;
+    }
+    .report form textarea{
+        width: 220px;
+    }
+    .report form input[type=submit]{
+        padding: 10px;
+        width: 240px;
+        margin-left: 1px;
+    }
+    @media (max-width:460px){
+        .report form{
+            width: 250px;
+            margin-left: 20px;
+        }
+        .report form input{
+            width: 90%;
+        }
+        .report{
+            width: 280px;
+        }
+        .report i{
+            left: 250px;
+        }
+    }
+}
+@media (max-width:350px){
+    .report{
+        left: 20px;
     }
 }
 /* End */
