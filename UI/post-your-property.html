@@ -81,30 +81,8 @@
     </footer>
 
 
-    <script>
-        function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '200px';
-            document.getElementById('main').style.marginLEFT = '100px';
-        }
-        function closeSlideMenu() {
-            document.getElementById('side-menu').style.width = '0';
-            document.getElementById('main').style.marginLeft = '0';
-        }
-        const realbtn = document.getElementById("photos");
-        const fakebtn = document.getElementById("choose-btn");  
-        const faketxt = document.getElementById("textfile");
-
-        fakebtn.addEventListener("click", ()=>{
-            realbtn.click();
-        });
+    <script src="js/script.js">
         
-        realbtn.addEventListener("change",()=>{
-            if(realbtn.value){
-                faketxt.innerHTML=realbtn.value;
-            }else{
-                faketxt.innerHTML="No file chosen";
-            }
-        });
     </script>
 </body>
 </html>
