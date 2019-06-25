@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/prop-details.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Details</title>
 </head>
 <body>
+    <div class="popup">
+        <div class="report">
+            <form action="">
+                <input type="text" name="" id="reason" placeholder="Why report this">
+                <textarea name="" id="description" cols="30" rows="5">Describe your problem here!
+                            </textarea>
+                <input type="submit" value="Report">
+            </form>
+            <i class="fa fa-times-circle" onclick="closeModal()"></i>
+        </div>
+    </div>
     <!-- Nav section -->
     <nav class="navbar">
         <span class="svg">
@@ -43,6 +55,9 @@
                 <p class="price"><strong>$100/night</strong></p>
                 <p class="contact"><strong>Tel: </strong>250 781 268 924</p>
                 <p class="status">Available</p>
+                <div class="flag-icon">
+                    <i class="fa fa-flag" onclick="showModal()"></i>
+                </div>
             </div>
         </section>
         <div class="more-details">
